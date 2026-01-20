@@ -1,5 +1,6 @@
 import { RouterProvider } from "react-router-dom"
 import { CartProvider } from "../context/CartContext"
+import { ThemeTest } from "../components/ui/ThemeTest"
 // import { router } from "./router"
 
 export default function App() {
@@ -7,6 +8,7 @@ export default function App() {
     <CartProvider>
       {/* <RouterProvider router={router} /> */}
       <>lol</>
+      <ThemeTest />
     </CartProvider>
   )
 }

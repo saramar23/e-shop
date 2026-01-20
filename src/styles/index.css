@@ -1,16 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@theme {
+  --color-primary: #285570; /* Dark blue-green Main buttons, links, active states */
+  --color-secondary: #0f172a; /*  Deep blue Headings, navigation, dark text*/
+  --color-accent: #edd7c2; /* Beige ? Ratings, sale badges, alerts*/
+  --color-background: #fdf6f9; /* Gray-pink App background*/
+  --color-surface: #ffffff; /* White Cards, modals*/
+  --color-error: #ef4444; /* Red-500 Validation errors, destructive actions */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --font-sans: "Inter", system-ui, sans-serif;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --radius-card: 12px;
+  --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--color-secondary);
+    background-color: var(--color-background);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+
+  body {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  small {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+  }
 }
